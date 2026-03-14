@@ -10,6 +10,19 @@ public class User
         this.Email = email;
         this.Age = age;
     }
+
+    public void Print()
+    {
+        Console.WriteLine($"Id: {this.Id}, Name: {this.Name},  Surname: {this.Surname}, Email: {this.Email},  Age: {this.Age}");
+    }
+
+    public bool IsAdult()
+    {
+        if (this.Age >= 18)
+            return true;
+        else
+            return false;
+    }
     
     public int Id { get; set; }
     public string Name { get; set; }
