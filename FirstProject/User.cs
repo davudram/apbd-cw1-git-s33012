@@ -39,6 +39,16 @@ public class User
         else
             return false;
     }
+
+    public int AgeDifference(User other)
+    {
+        return this.Age - other.Age;
+    }
+    
+    public bool IsOlderThan(int age)
+    {
+        return Age > age;
+    }
     
     public int Id { get; set; }
     public string Name { get; set; }

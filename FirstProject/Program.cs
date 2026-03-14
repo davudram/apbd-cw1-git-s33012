@@ -19,3 +19,4 @@ User user = new User(userId, userName, userSurname, userEmail, userAge);
 user.Print();
 
 Console.WriteLine("Is user adult -> " + user.IsAdult());
+Console.WriteLine("Is valid mail -> " + user.IsValidEmail());
