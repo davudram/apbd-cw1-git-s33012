@@ -23,6 +23,22 @@ public class User
         else
             return false;
     }
+
+    public bool IsRetired()
+    {
+        if (this.Age >= 65)
+            return true;
+        else
+            return false;
+    }
+
+    public bool IsValidEmail()
+    {
+        if (this.Email.Contains("@") && this.Email.Contains("."))
+            return true;
+        else
+            return false;
+    }
     
     public int Id { get; set; }
     public string Name { get; set; }
