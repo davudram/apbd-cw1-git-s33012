@@ -2,23 +2,23 @@
 
 public class User
 {
-    public User(int id, string name, string surname, string email, int age)
+    public User(int id, string name, string surname, string emailUser, int ageUser)
     {
         this.Id = id;
         this.Name = name;
         this.Surname = surname;
-        this.Email = email;
-        this.Age = age;
+        this.EmailUser = emailUser;
+        this.AgeUser = ageUser;
     }
 
     public void Print()
     {
-        Console.WriteLine($"Id: {this.Id}, Name: {this.Name},  Surname: {this.Surname}, Email: {this.Email},  Age: {this.Age}");
+        Console.WriteLine($"Id: {this.Id}, Name: {this.Name},  Surname: {this.Surname}, Email: {this.EmailUser},  Age: {this.AgeUser}");
     }
 
     public bool IsAdult()
     {
-        if (this.Age >= 18)
+        if (this.AgeUser >= 18)
             return true;
         else
             return false;
@@ -26,7 +26,7 @@ public class User
 
     public bool IsRetired()
     {
-        if (this.Age >= 65)
+        if (this.AgeUser >= 65)
             return true;
         else
             return false;
@@ -34,7 +34,7 @@ public class User
 
     public bool IsValidEmail()
     {
-        if (this.Email.Contains("@") && this.Email.Contains("."))
+        if (this.EmailUser.Contains("@") && this.EmailUser.Contains("."))
             return true;
         else
             return false;
@@ -42,17 +42,17 @@ public class User
 
     public int AgeDifference(User other)
     {
-        return this.Age - other.Age;
+        return this.AgeUser - other.AgeUser;
     }
     
     public bool IsOlderThan(int age)
     {
-        return Age > age;
+        return AgeUser > age;
     }
     
     public int Id { get; set; }
     public string Name { get; set; }
     public string Surname { get; set; }
-    public string Email { get; set; }
-    public int Age { get; set; }
+    public string EmailUser { get; set; }
+    public int AgeUser { get; set; }
 }
