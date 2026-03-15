@@ -27,4 +27,9 @@ public class Calculate
 
         return max;
     }
+
+    public static double CalculateMin(int[] values)
+    {
+        return 0;
+    }
 }
