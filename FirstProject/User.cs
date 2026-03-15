@@ -2,9 +2,10 @@
 
 public class User
 {
-    public User(int id, string name, string surname, string emailUser, int ageUser)
+
+    public User(int idUser, string name, string surname, string emailUser, int ageUser)
     {
-        this.Id = id;
+        this.IdUser = idUser;
         this.Name = name;
         this.Surname = surname;
         this.EmailUser = emailUser;
@@ -13,7 +14,7 @@ public class User
 
     public void Print()
     {
-        Console.WriteLine($"Id: {this.Id}, Name: {this.Name},  Surname: {this.Surname}, Email: {this.EmailUser},  Age: {this.AgeUser}");
+        Console.WriteLine($"Id: {this.IdUser}, Name: {this.Name},  Surname: {this.Surname}, Email: {this.EmailUser},  Age: {this.AgeUser}");
     }
 
     public bool IsAdult()
@@ -50,7 +51,7 @@ public class User
         return AgeUser > age;
     }
     
-    public int Id { get; set; }
+    public int IdUser { get; set; }
     public string Name { get; set; }
     public string Surname { get; set; }
     public string EmailUser { get; set; }
